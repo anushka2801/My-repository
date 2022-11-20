@@ -1,0 +1,11 @@
+img =imread('C:\Users\ANUSHKA\Downloads\Dip_Practicals_final\Dip_Practicals\img.jpg');
+img = rgb2gray(img);
+f = fspecial('sobel');
+f1 = fspecial('laplacian');
+f2 = fspecial('prewitt');
+b = imfilter(img,f);
+c = imfilter(img,f1);
+d = imfilter(img,f2);
+subplot(1,3,1),imshow(b),title('Sobel Filter');
+subplot(1,3,2),imshow(c),title('Laplacian filter');
+subplot(1,3,3),imshow(c),title('Prewitt filter');
